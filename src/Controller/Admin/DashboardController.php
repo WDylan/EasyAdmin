@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Marque;
+use App\Entity\Product;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -46,5 +47,6 @@ class DashboardController extends AbstractDashboardController
     {
         yield MenuItem::linkToRoute('Retour sur le site', 'fa fa-home', 'home.index');
         yield MenuItem::linkToCrud('Marques', 'fa fa-start', Marque::class);
+        yield MenuItem::linkToCrud('Produits', 'fa fa-phone', Product::class);
     }
 }
