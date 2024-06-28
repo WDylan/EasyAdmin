@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product
+{% endblock %}
+
+{% block body %}
+
+	<img src="{{ asset('/img/product/' ~ product.image) }}" alt="" class="img-thumbnail" alt="{{ product.nom }}">
+	<h1 class="text-center">{{product.nom}}</h1>
+	<h2 class="text-center">{{product.titre}}</h2>
+	<p class="text-center">{{product.description}}</p>
+	<h4 class="text-center">{{product.prix}}</h4>
+	<h5 class="text-center">{{product.categorie.nom}}</h5>
+	<a href="{{ path('app_product_index') }}" class="btn btn-primary">Back to list</a>
+{% endblock %}
